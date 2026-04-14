@@ -41,7 +41,8 @@ git clone --single-branch --branch 1.3.1 https://github.com/Brainicism/bgutil-yt
 cd bgutil-ytdlp-pot-provider/server/
 # If you are using Node:
 npm ci
-npx tsc
+# npx tsc
+ncc build -m -e canvas src/main.ts
 # Otherwise, if you want to use Deno:
 deno install --allow-scripts=npm:canvas --frozen
 ```
